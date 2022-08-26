@@ -32,7 +32,6 @@ void PrintArray(int[,] array) // в качестве аргумента прин
     }
 }
 
-//функция для поиска заданного числа в массиве
 
 //Задаем размер двумерного массива
 Console.WriteLine("введите число строк двумерно массива m:");
@@ -53,14 +52,6 @@ int x = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите координаты Y: ");
 int y = Convert.ToInt32(Console.ReadLine());
 
-// for (int i = 0; i < new_array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < new_array.GetLength(1); j++)
-//         {
-//             Console.Write($"{new_array[x, y]} ");
-//         }
-//         Console.WriteLine();
-//     }
 if (x <= m && x > 0 && y <= m && y > 0)
     Console.Write($"{new_array[x - 1, y - 1]} ");
     else Console.Write($"В заданном массиве отсутствует позиция с координатами ({x};{y}) ");

@@ -13,13 +13,14 @@ int n = Convert.ToInt32(Console.ReadLine());
 double[,] new_array = new double[m, n]; // наш массив будет размера m на n
 
 void FillArray(double[,] array) //функция для заполнения массива случайными числами
-{
+{ 
+    Random random = new Random(); 
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            //теперь обращаемся к элементу массива и заполняем случайными вещественными числами:
-            array[i, j] = new Random().Next(-99, 100); //это полуинтервал: [-99;99) 
+           array[i,j] =  Math.Round((random.NextDouble() * 100),1);
+           
         }
 
     }
